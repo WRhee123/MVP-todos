@@ -18,6 +18,7 @@ app.use(cors())
 app.use(express.json())
 // app.use(express.static('Public'))
 
+//get all route GOOD
 app.get('/api/todos', async(req, res) => {
     try{
         const result = await pool.query('SELECT * FROM todos');
@@ -28,6 +29,7 @@ app.get('/api/todos', async(req, res) => {
     }
 })
 
+//get 1 route GOOD
 app.get('/api/todos/:id', async(req, res) => {
     try{
         const id = parseInt(req.params.id);
@@ -46,6 +48,7 @@ app.get('/api/todos/:id', async(req, res) => {
     }
 })
 
+//post route GOOD
 app.post('/api/todos/', async(req, res) => {
     try{
         const {todo} = req.body;
@@ -57,6 +60,7 @@ app.post('/api/todos/', async(req, res) => {
     }
 })
 
+//put route GOOD
 app.put('/api/todos/:id', async(req, res) => {
     try{
         const id = parseInt(req.params.id);
@@ -73,6 +77,7 @@ app.put('/api/todos/:id', async(req, res) => {
     }
 })
 
+//delete route GOOD
 app.delete('/api/todos/:id', async(req, res) => {
     try{
         const id = parseInt(req.params.id);
