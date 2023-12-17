@@ -4,13 +4,24 @@ const dotenv = require('dotenv')
 dotenv.config();
 const {Pool} = require('pg')
 const cors = require('cors');
-const pool = new Pool ({
-    host: 'localhost',
-    user: 'postgres',
-    database: 'mvptodos',
-    password: '1',
-    port: '5432'
-})
+const connectionString = process.env.DATABASE_URL || {
+    user: process.env.DB_USER,
+        host: process.env.DB_HOST,
+        database: process.env.DB_NAME,
+        password: process.env.DB_PASSWORD,
+        port: process.env.DB_PORT
+}
+const pool = new Pool ({connectionString})
+pool.query('SELECT * FROM todos')
+.then(result => console.log(result.rows))
+
+// const pool = new Pool({
+//     connectionString: process.env.DATABASE_URL
+// })
+
+// const pool = new Pool({
+//  process.env.DATABASE_URL
+// })
 
 const PORT = process.env.PORT
 
