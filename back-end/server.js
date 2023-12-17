@@ -12,7 +12,7 @@ const pool = new Pool ({
     port: '5432'
 })
 
-const PORT = 3000
+const PORT = process.env.PORT
 
 app.use(cors())
 app.use(express.json())
