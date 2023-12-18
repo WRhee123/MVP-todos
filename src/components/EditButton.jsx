@@ -1,6 +1,6 @@
 const EditButton = ({todo, id, getSingleTodo}) => {
 return (
-    <button>Edit</button>
+    <button id={id}>Edit</button>
 )
 }
 

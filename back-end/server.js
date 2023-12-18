@@ -93,7 +93,11 @@ app.delete('/api/todos/:id', async(req, res) => {
     try{
         const id = parseInt(req.params.id);
         let result = await pool.query('DELETE FROM todos WHERE id = $1 RETURNING *', [id]);
-        res.status(200).send(result.rows[0])
+        if(result.rows.length === 0) {
+            res.status(404).json({error: 'todo not found'})
+        } else {
+             res.status(200).send(result.rows[0])
+        }
     }catch(error) {
         console.log(error.stack);
         res.status(500).json({error: 'Internal Server Error'})
