@@ -6,8 +6,18 @@ import './App.css'
 
 function App() {
   const [todos, setTodos] = useState([])
-  const [singleTodo, getSingleTodo] = useState([])
+  const [singleTodo, setSingleTodo] = useState(null)
   // const [loading, setLoading] = useState(true)
+
+const getSingleTodo = async(id) => {
+try {
+  const response = await fetch(`http://localhost:3000/api/todos/${id}`)
+  const data = await response.json();
+  setSingleTodo(data)
+} catch(error) {
+console.log('could not get todo')
+}
+}
 
 useEffect(() => {
   const getTodos = async() => {
@@ -16,7 +26,7 @@ useEffect(() => {
     const data = await res.json();
     console.log(data)
     setTodos(data)
-    console.log(todos)
+    console.log(todos[0])
   }catch(error) {
     console.log(error)
     }
@@ -49,7 +59,7 @@ useEffect(() => {
 return (
   <>
  <AddTodo todos={todos} setTodos={setTodos}/>
- <MyTodoList todos={todos} getSingleTodo={getSingleTodo}/>
+ <MyTodoList todos={todos} setTodos={setTodos} getSingleTodo={getSingleTodo}/>
  </>
 
 )

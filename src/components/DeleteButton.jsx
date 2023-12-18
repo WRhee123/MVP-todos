@@ -1,5 +1,5 @@
 
-const DeleteButton = ({todo, id, getSingleTodo}) => {
+const DeleteButton = ({todo, todos, setTodos, id, getSingleTodo}) => {
 
     const handleDelete = async() => {
         try{
@@ -21,6 +21,7 @@ const DeleteButton = ({todo, id, getSingleTodo}) => {
             } else {
                 console.log('failed to delete todo')
             }
+            setTodos(todos.filter((todo) => todo.id !== id));
         }catch(error) {
             console.log(error)
         }

@@ -16,6 +16,8 @@ const AddTodo = ({todos, setTodos}) => {
       });
       if(response.ok) {
         let resData = await response.json();
+        //when the line below was added functionality did not change
+        setTodos([...todos, resData]);
         console.log('todo was added', resData); 
       } else {
         console.log('failed to add todo')
