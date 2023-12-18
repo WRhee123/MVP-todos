@@ -1,23 +1,32 @@
 import { useState, useEffect} from 'react'
 import MyTodoList from './components/MyTodoList'
-import SubmitButton from './components/SubmitButton'
+import AddTodo from './components/AddTodo'
 import Loading from './components/Loading'
 import './App.css'
 
 function App() {
   const [todos, setTodos] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [singleTodo, getSingleTodo] = useState([])
+  // const [loading, setLoading] = useState(true)
 
 useEffect(() => {
   const getTodos = async() => {
-    const res = await fetch('./api/todos');
+    try{
+      const res = await fetch('http://localhost:3000/api/todos');
     const data = await res.json();
     console.log(data)
     setTodos(data)
-    setLoading(false)
+    console.log(todos)
+  }catch(error) {
+    console.log(error)
+    }
   };
  getTodos();
 }, []);
+
+useEffect(() => {
+  console.log('Updated todos:', todos);
+}, [todos]); // Log the updated todos whenever the todos state changes
 
 // if(loading) {
 //   return(
@@ -36,16 +45,11 @@ useEffect(() => {
   
 // }
 
+
 return (
-  <> 
-  <form>
-  <div>
-    <label>Add Todo</label>
-    <input type='text' id='addTodo'></input>
-  </div>
-<SubmitButton todos={todos} setTodos={setTodos}/>
-<MyTodoList todos={todos}/>
- </form>
+  <>
+ <AddTodo todos={todos} setTodos={setTodos}/>
+ <MyTodoList todos={todos} getSingleTodo={getSingleTodo}/>
  </>
 
 )
