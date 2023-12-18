@@ -9,6 +9,8 @@ return todos.map((todo) => (
 getSingleTodo={getSingleTodo}
 edit ={edit}
 setEdit={setEdit}
+editId={editId} 
+setEditId={setEditId}
 />
  {console.log('Todo ID:', todo.id)}
 </div>

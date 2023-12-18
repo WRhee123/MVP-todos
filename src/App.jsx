@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react'
 import MyTodoList from './components/MyTodoList'
 import AddTodo from './components/AddTodo'
-import EditButton2 from './components/EditButton2'
+// import EditButton2 from './components/EditButton2'
 import Loading from './components/Loading'
 import './App.css'
 
@@ -70,7 +70,7 @@ useEffect(() => {
 return (
   <>
  <AddTodo todos={todos} setTodos={setTodos}/>
- <MyTodoList todos={todos} setTodos={setTodos} getSingleTodo={getSingleTodo} edit ={edit} setEdit={setEdit}/>
+ <MyTodoList todos={todos} setTodos={setTodos} getSingleTodo={getSingleTodo} edit={edit} setEdit={setEdit} editId={editId} setEditId={setEditId}/>
  </>
 
 )
