@@ -1,13 +1,18 @@
 import { useState, useEffect} from 'react'
 import MyTodoList from './components/MyTodoList'
 import AddTodo from './components/AddTodo'
+import EditButton2 from './components/EditButton2'
 import Loading from './components/Loading'
 import './App.css'
 
 function App() {
   const [todos, setTodos] = useState([])
   const [singleTodo, setSingleTodo] = useState(null)
+  const [edit, setEdit] = useState(false)
+  const [editId, setEditId] = useState([])
   // const [loading, setLoading] = useState(true)
+
+
 
 const getSingleTodo = async(id) => {
 try {
@@ -54,12 +59,18 @@ useEffect(() => {
 //   )
   
 // }
+// if(edit === true) {
+//   return(
+//   <EditButton2/>
+//   )
+  
+// }
 
 
 return (
   <>
  <AddTodo todos={todos} setTodos={setTodos}/>
- <MyTodoList todos={todos} setTodos={setTodos} getSingleTodo={getSingleTodo}/>
+ <MyTodoList todos={todos} setTodos={setTodos} getSingleTodo={getSingleTodo} edit ={edit} setEdit={setEdit}/>
  </>
 
 )
