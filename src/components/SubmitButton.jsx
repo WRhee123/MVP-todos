@@ -1,7 +1,11 @@
-const SubmitButton = ({todos}, {setTodos}) => {
+const SubmitButton = ({submitTodo}, {todos}) => {
+
+    const handleClick = () => {
+        submitTodo();
+    }
     return (
         <>
-        <button>Submit</button>
+        <button onClick={handleClick}>Submit</button>
         </>
     )
 }
