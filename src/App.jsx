@@ -70,7 +70,9 @@ useEffect(() => {
 return (
   <>
   <div>
-    <h1 className='title'>MVP Todos</h1>
+    <div className='MVPheader'>
+      <h1 className='title'>MVP Todos</h1>
+    </div>
     <AddTodo todos={todos} setTodos={setTodos}/>
  <MyTodoList todos={todos} setTodos={setTodos} getSingleTodo={getSingleTodo} edit={edit} setEdit={setEdit} editId={editId} setEditId={setEditId}/>
  </div>

@@ -28,9 +28,9 @@ label{
 }
 
 body {
-  background: #F8B195;
+  background-image: url(lofi2.jpg);
   color: hsl(200, 100%, 90%);
-  max-width: 400px;
+  max-width: 550px;
   padding: 1rem;
   margin: 0 auto;
 }
@@ -40,7 +40,7 @@ font-size:60px
 }
 
 .singleTodo {
-  background: #F67280;
+  background: #e1b39d;
   height: 100px;
   width: 600px;
 
@@ -60,4 +60,16 @@ font-size:60px
   background:#355C7D;
   width: 70px;
   height: 30px;
+}
+
+.addTodoInput {
+  height: 30px;
+  width: 300px;
+  display: flex;
+  justify-content: 'center';
+}
+
+.MVPheader {
+  display: flex;
+  justify-content: center;
 }

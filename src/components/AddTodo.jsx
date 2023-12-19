@@ -33,8 +33,8 @@ const AddTodo = ({todos, setTodos}) => {
         <>
 <form>
   <div>
-    <label>Add Todo</label>
-    <input type='text' id='addTodo'></input>
+    <label style={{fontSize: '30px'}}>Add Todo</label>
+    <input type='text' id='addTodo' className='addTodoInput'></input>
   </div>
 <SubmitButton submitTodo={submitTodo} todos={todos}/>
 </form></>
