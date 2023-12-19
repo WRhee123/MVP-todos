@@ -34,7 +34,7 @@ const AddTodo = ({todos, setTodos}) => {
 <form>
   <div>
     <label style={{fontSize: '30px'}}>Add Todo</label>
-    <input type='text' id='addTodo' className='addTodoInput'></input>
+    <input type='text' id='addTodo' className='addTodoInput' placeholder='Type todo here'></input>
   </div>
 <SubmitButton submitTodo={submitTodo} todos={todos}/>
 </form></>
