@@ -18,6 +18,7 @@ h1{
   font-family: myFont;
 }
 
+
 button {
   font-family: myFont;
 }
@@ -27,7 +28,7 @@ label{
 }
 
 body {
-  background: #333;
+  background: #F8B195;
   color: hsl(200, 100%, 90%);
   max-width: 400px;
   padding: 1rem;
@@ -39,5 +40,24 @@ font-size:60px
 }
 
 .singleTodo {
-  background: #F8B195
+  background: #F67280;
+  height: 100px;
+  width: 600px;
+
+}
+
+.submitbutton {
+  background:#C06C84;
+}
+
+.editbutton {
+  background:#6C5B7B;
+  width: 70px;
+  height: 30px;
+}
+
+.deletebutton {
+  background:#355C7D;
+  width: 70px;
+  height: 30px;
 }

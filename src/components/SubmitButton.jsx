@@ -5,7 +5,7 @@ const SubmitButton = ({submitTodo}, {todos}) => {
     }
     return (
         <>
-        <button onClick={handleClick}>Submit</button>
+        <button className='submitbutton' onClick={handleClick}>Submit</button>
         </>
     )
 }

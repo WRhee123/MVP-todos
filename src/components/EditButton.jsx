@@ -13,7 +13,7 @@ console.log(e.currentTarget.id)
 //used a ternary operator here for conditional check
 return (
     <div>
-        <button onClick={handleClick} id={id}>
+        <button className='editbutton' onClick={handleClick} id={id}>
             Edit
             </button>
     {edit && editId === id ? <EditButton2 todo={todo} todos={todos} setTodos={setTodos} id={id} edit={edit} setEdit={setEdit} /> : null}
