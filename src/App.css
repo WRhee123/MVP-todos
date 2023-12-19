@@ -69,6 +69,13 @@ font-size:60px
   border-radius: 10px;
 }
 
+.LofiAudioButton {
+  background:#ee7468;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
 .addTodoInput {
   height: 30px;
   width: 300px;

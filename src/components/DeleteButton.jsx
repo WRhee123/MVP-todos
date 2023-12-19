@@ -28,7 +28,7 @@ const DeleteButton = ({todo, todos, setTodos, id, getSingleTodo}) => {
     }
 
 return(
-    <button className='deletebutton' onClick={handleDelete} id={id}>Delete</button>
+    <button className='deletebutton' onClick={handleDelete} id={id}>🗑️</button>
 )
 }
 

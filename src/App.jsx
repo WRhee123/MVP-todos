@@ -1,6 +1,8 @@
 import { useState, useEffect} from 'react'
 import MyTodoList from './components/MyTodoList'
 import AddTodo from './components/AddTodo'
+import LofiAudio from './components/LofiAudio'
+import Song from './Song.mp3'
 // import EditButton2 from './components/EditButton2'
 import Loading from './components/Loading'
 import './App.css'
@@ -66,6 +68,12 @@ useEffect(() => {
   
 // }
 
+const play = () => {
+  const audio = new Audio(Song);
+  audio.volume = 0.1
+  audio.play()
+  console.log('this song')
+}
 
 return (
   <>
@@ -73,7 +81,12 @@ return (
     <div className='MVPheader'>
       <h1 className='title'>MVP Todos</h1>
     </div>
-    <AddTodo todos={todos} setTodos={setTodos}/>
+    <div>
+      <AddTodo todos={todos} setTodos={setTodos}/>
+      </div>
+    <div>
+      <LofiAudio play={play}/>
+    </div>
  <MyTodoList todos={todos} setTodos={setTodos} getSingleTodo={getSingleTodo} edit={edit} setEdit={setEdit} editId={editId} setEditId={setEditId}/>
  </div>
  </>
