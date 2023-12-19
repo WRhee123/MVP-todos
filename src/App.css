@@ -47,19 +47,22 @@ font-size:60px
 }
 
 .submitbutton {
-  background:#C06C84;
+  background:#ee7468;
+  font-size: 20px;
 }
 
 .editbutton {
   background:#6C5B7B;
   width: 70px;
   height: 30px;
+  font-size: 20px;
 }
 
 .deletebutton {
   background:#355C7D;
   width: 70px;
   height: 30px;
+  font-size: 20px;
 }
 
 .addTodoInput {
