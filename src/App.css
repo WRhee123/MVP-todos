@@ -43,12 +43,12 @@ font-size:60px
   background: #e1b39d;
   height: 100px;
   width: 600px;
-
 }
 
 .submitbutton {
   background:#ee7468;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 .editbutton {
@@ -56,6 +56,7 @@ font-size:60px
   width: 70px;
   height: 30px;
   font-size: 20px;
+  border-radius: 10px;;
 }
 
 .deletebutton {
@@ -63,6 +64,7 @@ font-size:60px
   width: 70px;
   height: 30px;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 .addTodoInput {
@@ -70,6 +72,7 @@ font-size:60px
   width: 300px;
   display: flex;
   justify-content: 'center';
+  border-radius: 10px;
 }
 
 .MVPheader {
