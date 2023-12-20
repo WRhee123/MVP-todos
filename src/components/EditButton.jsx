@@ -14,7 +14,7 @@ console.log(e.currentTarget.id)
 return (
     <div>
         <button className='editbutton' onClick={handleClick} id={id}>
-            Edit
+        🖋️
             </button>
     {edit && editId === id ? <EditButton2 todo={todo} todos={todos} setTodos={setTodos} id={id} edit={edit} setEdit={setEdit} /> : null}
     </div>
