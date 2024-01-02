@@ -18,6 +18,8 @@ const AddTodo = ({todos, setTodos}) => {
       if(response.ok) {
         let resData = await response.json();
         //when the line below was added functionality did not change
+        //spread operator creates a copy of the existing todos array and ensure the original array is not modified.
+        //it concatenates the elements of the existing todos array with the resData
         setTodos([...todos, resData]);
         console.log('todo was added', resData); 
       } else {
